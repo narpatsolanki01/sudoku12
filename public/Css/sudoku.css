@@ -1,0 +1,86 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+#gamebox{
+     width:100%;
+   display: flex;
+   justify-content: center;
+}
+#gamebox .tile{
+   width:35px;
+   height:35px;
+   display: flex;	
+   justify-content: center;
+   align-items: center;
+   border:1px solid #e5e4e4;
+   font-size: 22px;
+   padding: 10px;
+   font-weight: 600;
+   margin: 0px;
+   cursor: pointer;
+   z-index: 0;
+}
+#gamebox .tile:nth-child(3n){
+   border-bottom: 2px solid #000;
+   z-index: 1;
+}
+#gamebox .tile:nth-child(1){ 
+   border-top: 2px solid #000;
+}
+#gamebox .rows:nth-child(3n){
+   border-right: 2px solid #000;
+}
+#gamebox .rows:nth-child(1){
+   border-left: 2px solid #000;
+}
+.danger{
+   color:#F70000;
+}
+.selectHover{
+   background-color:#A0C5E8;
+}
+.selectHover1{
+   background-color: transparent;
+}
+.border_right{
+   border-right:4px solid #000;
+}
+#button_digit{
+   width:700px ;
+   display: flex;
+   justify-content:space-around;
+   margin: auto;
+   align-items: center;
+   cursor: pointer;
+}
+#tooltip{
+   display: none;
+}
+.icons{
+   cursor: pointer;
+}
+p,h6{
+   padding: 0;
+   margin:5px;
+}
+#showgame{
+   /* display: none; */
+}
+#lost_game{
+   width: 100%;
+   height: 100vh;
+   position: absolute;
+   top: 0px;
+   background:linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    display: none; 
+/*   transform: scale(0);*/
+   transition: 0.3s;
+}
+@media screen and (min-width:570px){
+   #gamebox .tile{
+      width:50px;
+      height:50px;
+   }
+}
